@@ -21,7 +21,7 @@ int main(void)
 				for (second_num_sd = 0; second_num_sd <= 9; second_num_sd++)
 				{
 
-				if (first_num_fd + first_num_sd < second_num_fd + second_num_sd)
+				if (first_num_fd * 10 + first_num_sd < second_num_fd * 10 + second_num_sd)
 				{
 					putchar(first_num_fd + 48);
 					putchar(first_num_sd + 48);
