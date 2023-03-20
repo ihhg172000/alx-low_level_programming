@@ -7,37 +7,39 @@
 */
 int main(void)
 {
-	int first_num_fd;
-	int first_num_sd;
-	int second_num_fd;
-	int second_num_sd;
+	int first_num_1st_digit;
+	int first_num_2nd_digit;
+	int second_num_1st_digit;
+	int second_num_2nd_digit;
 
-	for (first_num_fd = 0; first_num_fd <= 9; first_num_fd++)
+	for (first_num_1st_digit = 0; first_num_1st_digit <= 9; first_num_1st_digit++)
 	{
-		for (first_num_sd = 0; first_num_sd <= 9; first_num_sd++)
+		for (first_num_2nd_digit = 0; first_num_2nd_digit <= 9; first_num_2nd_digit++)
 		{
-			for (second_num_fd = 0; second_num_fd <= 9; second_num_fd++)
+			for (second_num_1st_digit = 0; second_num_1st_digit <= 9; second_num_1st_digit++)
 			{
-				for (second_num_sd = 0; second_num_sd <= 9; second_num_sd++)
+				for (second_num_2nd_digit = 0;
+					 second_num_2nd_digit <= 9;
+						 second_num_2nd_digit++)
 				{
-
-				if (first_num_fd * 10 + first_num_sd < second_num_fd * 10 + second_num_sd)
-				{
-					putchar(first_num_fd + 48);
-					putchar(first_num_sd + 48);
-					putchar(' ');
-					putchar(second_num_fd + 48);
-					putchar(second_num_sd + 48);
-
-					if (!(first_num_fd == 9 &&
-					first_num_sd == 8 &&
-					second_num_fd == 9 &&
-					second_num_sd == 9))
+					if (first_num_1st_digit * 10 + first_num_2nd_digit
+						 < second_num_1st_digit * 10 + second_num_2nd_digit)
 					{
-						putchar(',');
+						putchar(first_num_1st_digit + 48);
+						putchar(first_num_2nd_digit + 48);
 						putchar(' ');
+						putchar(second_num_1st_digit + 48);
+						putchar(second_num_2nd_digit + 48);
+
+						if (!(first_num_1st_digit == 9 &&
+							first_num_2nd_digit == 8 &&
+								second_num_1st_digit == 9 &&
+									second_num_2nd_digit == 9))
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
-				}
 				}
 			}
 		}
