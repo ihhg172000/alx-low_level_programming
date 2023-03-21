@@ -12,13 +12,30 @@ void times_table(void)
 	{
 		for (inner = 0; inner <= 9; inner++)
 		{
-			_putchar((outer * inner) + 48);
+			int mul = outer * inner;
 
-			if (inner > 9)
+			if (inner > 0)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
+				if (mul > 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+			}
+			if (mul <= 9)
+			{
+				_putchar(mul + 48);
+			}
+			else
+			{
+				_putchar((mul / 10) + 48);
+				_putchar((mul % 10) + 48);
 			}
 		}
 
