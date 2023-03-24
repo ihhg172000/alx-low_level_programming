@@ -16,7 +16,7 @@ void print_diagonal(int n)
 		{
 			int h_count;
 
-			for (h_count = 0; h_count <= v_count; h_count++)
+			for (h_count = 1; h_count <= v_count; h_count++)
 			{
 				if (h_count == v_count)
 				{
