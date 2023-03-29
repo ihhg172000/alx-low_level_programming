@@ -10,6 +10,9 @@ char *cap_string(char *s)
 
 	while (*temp)
 	{
+		if (*s >= 'a' && *s <= 'z')
+			*s = *s - 32;
+
 		switch (*(temp - 1))
 		{
 			case ' ':
