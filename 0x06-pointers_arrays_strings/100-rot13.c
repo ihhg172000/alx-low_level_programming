@@ -6,16 +6,22 @@
 */
 char *rot13(char *s)
 {
-	char *temp = s;
+	char *alpha = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	char *rot13 = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
+	int i = 0, j;
 
-	while (*temp)
+	while (s[i])
 	{
-		if ((*temp >= 'a' && *temp <= 'm') || (*temp >= 'A' && *temp <= 'M'))
-			*temp += 13;
-		else if ((*temp >= 'n' && *temp <= 'z') || (*temp >= 'N' && *temp <= 'Z'))
-			*temp -= 13;
+		for (j = 0; alpha[j]; j++)
+		{
+			if (s[i] == alpha[j])
+			{
+				s[i] = rot13[j];
+				break;
+			}
+		}
 
-		temp++;
+		i++;
 	}
 
 	return (s);
