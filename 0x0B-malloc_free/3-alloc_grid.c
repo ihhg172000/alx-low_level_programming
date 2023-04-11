@@ -1,6 +1,5 @@
+#include "main.h"
 #include <stdlib.h>
-
-void free_grid(int **grid, int height);
 
 /**
 * **alloc_grid - function allocates and initializes a 2D array
@@ -39,19 +38,4 @@ int **alloc_grid(int width, int height)
 	}
 
 	return (ptr);
-}
-
-/**
-* free_grid - function frees 2D array
-* @grid: pointer to 2D array
-* @height: height of 2D array
-*/
-void free_grid(int **grid, int height)
-{
-	int i;
-
-	for (i = 0; i < height; i++)
-		free(grid[i]);
-
-	free(grid);
 }
