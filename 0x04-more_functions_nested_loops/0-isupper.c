@@ -6,13 +6,8 @@
 */
 int _isupper(int c)
 {
-	char upper_letter;
-
-	for (upper_letter = 'A'; upper_letter <= 'Z'; upper_letter++)
-	{
-		if (c == upper_letter)
-			return (1);
-	}
+	if (c >= 'A' && c <= 'Z')
+		return (1);
 
 	return (0);
 }

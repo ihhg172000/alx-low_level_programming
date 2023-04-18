@@ -3,9 +3,9 @@
 #include <time.h>
 
 /**
-* main - Entry point
+* main - program checks last digit of random int and prints appropriate message
 *
-* Return: Always 0 (Success)
+* Return: 0 always
 */
 int main(void)
 {

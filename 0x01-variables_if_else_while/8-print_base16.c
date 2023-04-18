@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
+* main - program prints the hexadecimal numbers 0 to F
 *
-* Return: Always 0 (Success)
+* Return: 0 always
 */
 int main(void)
 {

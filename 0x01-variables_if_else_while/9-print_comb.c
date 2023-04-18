@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
-* main - Entery point
+* main - program prints numbers from 0 to 9 separated by commas & spaces
 *
-* Return: Always 0 (Success)
+* Return: 0 always
 */
 int main(void)
 {

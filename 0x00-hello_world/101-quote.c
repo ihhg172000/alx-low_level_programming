@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
+* main - program prints an error message to stderr using fprintf() function
 *
-* Return: Always 1 (Error)
+* Return: 1 always
 */
 int main(void)
 {
