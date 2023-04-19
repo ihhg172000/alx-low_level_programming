@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 /**
 * print_name - function prints name by calling the function pointer f
 * @name: pointer to string represent name
@@ -5,5 +7,6 @@
 */
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (f != NULL)
+		f(name);
 }
