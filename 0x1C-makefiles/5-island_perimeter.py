@@ -16,20 +16,20 @@ def island_perimeter(grid):
                     if grid[row - 1][col] == 0:
                         perimeter += 1
                 except IndexError:
-                    pass
+                    perimeter += 1
                 try:
                     if grid[row + 1][col] == 0:
                         perimeter += 1
                 except IndexError:
-                    pass
+                    perimeter += 1
                 try:
                     if grid[row][col - 1] == 0:
                         perimeter += 1
                 except IndexError:
-                    pass
+                    perimeter += 1
                 try:
                     if grid[row][col + 1] == 0:
                         perimeter += 1
                 except IndexError:
-                    pass
+                    perimeter += 1
     return perimeter
