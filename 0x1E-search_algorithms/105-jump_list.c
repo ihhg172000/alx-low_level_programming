@@ -15,11 +15,16 @@
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t step = sqrt(size), low = 0, high = step, i;
-	listint_t *temp = list;
+	size_t step, low, high, i;
+	listint_t *temp;
 
 	if (!list)
 		return (NULL);
+
+	step = sqrt(size);
+	low = 0;
+	high = step;
+	temp = list;
 
 	for (i = 0; list->next && i < high; i++)
 		list = list->next;
