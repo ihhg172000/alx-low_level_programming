@@ -4,3 +4,7 @@
 100-jump
 102-interpolation
 103-exponential
+105-jump
+create_list.c
+free_list.c
+print_list.c
