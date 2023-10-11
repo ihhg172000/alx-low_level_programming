@@ -15,46 +15,37 @@
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t step, low, high, i;
-	listint_t *temp;
+	size_t step = sqrt(size), low = 0, high = 0, i;
+	listint_t *follower = list;
 
 	if (!list)
 		return (NULL);
 
-	step = sqrt(size);
-	low = 0;
-	high = step;
-	temp = list;
-
-	for (i = 0; list->next && i < high; i++)
+	for (; list->next && high < step; high++)
 		list = list->next;
 
 	while (low < high)
 	{
 		printf("Value checked at index [%lu] = [%d]\n", high, list->n);
-		if (high < size && list->n < value)
+		if (high < size - 1 && list->n < value)
 		{
 			low = high;
-			high += step;
-			temp = list;
+			follower = list;
+			high = high + step >= size ? size - 1 : high + step;
 
 			for (i = low; list->next && i < high; i++)
 				list = list->next;
+
+			continue;
 		}
-		else
+
+		printf("Value found between indexes [%lu] and [%lu]\n", low, high);
+
+		for (; follower && low <= high; low++, follower = follower->next)
 		{
-			if (high >= size)
-				high = size - 1;
-
-			printf("Value found between indexes [%lu] and [%lu]\n", low, high);
-			for (; temp && low <= high; low++)
-			{
-				printf("Value checked at index [%lu] = [%d]\n", low, temp->n);
-				if (temp->n == value)
-					return (temp);
-
-				temp = temp->next;
-			}
+			printf("Value checked at index [%lu] = [%d]\n", low, follower->n);
+			if (follower->n == value)
+				return (follower);
 		}
 	}
 
