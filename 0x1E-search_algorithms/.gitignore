@@ -8,3 +8,7 @@
 create_list.c
 free_list.c
 print_list.c
+106-linear
+create_skiplist.c
+free_skiplist.c
+print_skiplist.c
