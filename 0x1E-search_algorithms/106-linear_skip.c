@@ -32,7 +32,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 			while (list->next)
 				list = list->next;
 
-		if (list->n > value || !(list->next))
+		if (list->n >= value || !(list->next))
 			break;
 	}
 
